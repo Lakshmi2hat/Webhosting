@@ -1,0 +1,33 @@
+.btn {
+  font-family: $font-normal;
+  outline: none;
+  border-radius: rem(8);
+  font-size: rem(14);
+  line-height: rem(24);
+  padding: rem(12);
+  box-shadow: none;
+  text-transform: none;
+  border: rem(1) $primary-color solid;
+  background-color: $white-color;
+  color: $black-color;
+  &:focus,
+  &:active,
+  &.active {
+    box-shadow: none;
+    outline: none;
+  }
+  &.primary-btn {
+    color: $white-color;
+    background: $primary-color;
+    box-shadow: rem(0) rem(0) rem(64) $btn-shadow;
+  } 
+  &.outline-btn {
+    border-color: $black-color;
+    .large{
+      line-height: rem(32);
+      padding: rem(9) rem(56);
+      border:rem(2) solid $black-color;
+      margin: rem(35) 0;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.plan-card {
+    width: 33.333333%;
+    padding: rem(34) rem(27) rem(48) rem(35);
+    h4 {
+        font-family: $font-semibold;
+        font-size: rem(28);
+        line-height: rem(24);
+        margin-bottom: rem(11);
+    }
+    p {
+        font-family: $font-normal;
+        font-size: rem(12);
+        line-height: rem(18);
+        margin-bottom: rem(28);
+    }
+    h3 {
+        font-family: $font-semibold;
+        font-size: rem(42);
+        line-height: rem(32);
+        span {
+            font-family: $font-light;
+            font-size: rem(14);
+            line-height: rem(14);
+            margin: rem(11) 0 0;
+        }
+    }
+    ul {
+        li {
+            font-family: $font-bold;
+            font-size: rem(16);
+            line-height: rem(24);
+            margin: rem(7.5) 0;
+            padding: rem(18);
+            position: relative;
+            &.sub-head{
+                font-family: $font-subhead;
+            }
+            &::before {
+                position: absolute;
+                content: "\e900";
+                font-size: rem(18);
+                left: 0;
+            }
+        }
+    }
+}

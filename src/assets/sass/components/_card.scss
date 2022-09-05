@@ -1,0 +1,38 @@
+.card {
+    background: $white-color;
+    box-shadow: rem(0) rem(10) rem(20) $card-shadow;
+    border-radius: rem(8);
+    padding: rem(40) rem(32) rem(32);
+    p {
+        font-family: $font-regular;
+        font-size: rem(16);
+        line-height: rem(32);
+        color: $black-color;
+    }
+    h5 {
+        font-family: $font-subhead;
+        font-size: rem(18);
+        line-height: rem(28);
+        margin-top: rem(24);
+        color: $secondary-color;
+    }
+    h6 {
+        font-family: $font-medium;
+        font-size: rem(14);
+        line-height: rem(24);
+        color: $light-grey;
+    }
+    img {
+        margin-bottom: rem(15);
+    }
+    .quotes-icon {
+        font-size: rem(16);
+        color: $quotes-color;
+    }
+    &.large {
+        padding-bottom: rem(96);
+    }
+    &.medium {
+        padding-bottom: rem(14);
+    }
+}

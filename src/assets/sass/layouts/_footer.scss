@@ -1,0 +1,64 @@
+ footer {
+    background: $primary-color;
+    padding: rem(64) rem(104) rem(80);
+    color: $white-color;
+    @include tablet-md{
+        padding: rem(40) rem(24);
+    }
+    .footer-top {
+        display: flex;
+        gap: rem(120);
+        @include tablet-md {
+            gap: rem(10);
+            flex-wrap: wrap;
+        }
+        .footer-block-left {
+            width: 26%;
+            @include tablet-md {
+                width: 100%;
+            }
+        }
+        .footer-block-right {
+            display: flex;
+            flex-wrap: wrap;
+            gap: rem(120);
+            width: 74%;
+            margin-top: rem(16);
+            @include tablet-md {
+                width: 100%;
+                gap: rem(16);
+                margin-top: 0;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: rem(24);
+                font-size: rem(16);
+                line-height: rem(32);
+                @include tablet-lg{
+                    width: 100%;
+                    gap: rem(10);
+                    font-size: rem(12);
+                    line-height: rem(20);
+                }
+                .sub-head {
+                    font-family: $font-subhead;
+                    line-height: rem(24);
+                }
+            }
+        }
+    }
+    .footer-bottom {
+        margin-top: rem(96);
+        @include tablet-md  {
+            margin-top: rem(30);
+        }
+    }
+    p {
+        margin-top: rem(16);
+        @include tablet-md {
+            font-size: rem(12);
+            line-height: rem(20);
+        }
+    }
+ }
