@@ -37,6 +37,6 @@ select{
     appearance: none;
     font-size: rem(12);
     background:$white-color url(../../../images/icons/select_icon.png) no-repeat center right;
-    background-size: 24px auto;
+    background-size: rem(24) auto;
 }
  

@@ -42,7 +42,7 @@ h4,
 .h3,
 .h4 { 
   font-family:$font-bold; 
-  color: $primary-color;
+  color: $secondary-color;
 } 
 
 h1,
@@ -50,22 +50,37 @@ h1,
   font-family: $font-mainhead;
   font-size: rem(64);
   line-height: rem(78); 
-  margin-bottom: rem(34);
-
-  @include tablet-md(){
-    font-size: rem(30);
-    line-height: rem(40);
-  } 
+  margin:rem(26) 0 rem(34);
+  color: $main-header-color;
+  @include desktop-xs(){
+    font-size: rem(24);
+    line-height: rem(30);
+  }
+  @include tablet-lg(){
+      font-size: rem(21);
+      line-height: rem(28);
+  }
 }
 
 h2,
 .h2 {
-  font-size: rem(24);
-  line-height: rem(28); 
-
-  @include mobile-lg(){
-    font-size: rem(20);
-    line-height: rem(24);
+  font-size: rem(48);
+  line-height: rem(64); 
+  font-family: $font-header;
+  color: $secondary-color;
+  &.header {
+    font-family: $font-semibold;
+    font-size: rem(50);
+    line-height: rem(60);
+    color: $black-color;
+  }
+  @include desktop-xs(){
+    font-size: rem(24)!important;
+    line-height: rem(30)!important;
+  }
+  @include tablet-lg(){
+      font-size: rem(21)!important;
+      line-height: rem(28)!important;
   }
 }
 
@@ -89,14 +104,13 @@ h4,
 .h4 {
   font-size: rem(20);
   line-height: rem(30);
-  
+  font-family: $font-mainhead;
 }
 
 h5,
 .h5 {
   font-size: rem(18);
   line-height: rem(24);
-  
 }
 
 p { 
@@ -104,6 +118,10 @@ p {
   margin: 0;  
   font-size: rem(16);
   line-height: rem(32);
+  @include mobile-md {
+    font-size: rem(14);
+    line-height: rem(28);
+  }
 }
 p+p{
   margin-top: 20px;
@@ -114,44 +132,47 @@ strong{
 .container {
   padding-left: rem(15);
   padding-right: rem(15);
-  max-width: rem(1245);
+  max-width: rem(1247);
   margin: auto;  
-  @include desktop-xs(){
-    max-width: rem(1020); 
+  &.full-width {
+    max-width: rem(1292);  // footer
   }
-  @include tablet-lg(){
-    max-width: rem(916);
-  }
-  @include tablet-md(){
-    max-width: rem(800);
-  }
-  @include tablet-sm(){
-    max-width: rem(800);
-  }
-  @include mobile-lg(){
-    max-width: rem(780);
-  }
-  @include mobile-md(){
-    max-width: rem(780);
-  }
-  @include mobile-sm(){
-    max-width: rem(780);
-  }  
   &.large {
-    max-width: rem(1310);
+    max-width: rem(1314);  // true cloud
   }
   &.small {
-    max-width: rem(1127);
+    max-width: rem(1127);  // Pricing
   }
   &.medium {
-    max-width: rem(1224);
+    max-width: rem(1224); // websites
   }
-  &.semi-large {
-    max-width: rem(1307);
+  &.contactus-container {
+    max-width: rem(1304);  // contact us
   }
-  &.full-width {
-    max-width: 100%;
+  &.grid-container {
+    max-width: rem(1045);
   }
+  @include desktop-xs(){
+    max-width: rem(1020)!important; 
+  }
+  @include tablet-lg(){
+    max-width: rem(916)!important;
+  }
+  @include tablet-md(){
+    max-width: rem(800)!important;
+  }
+  @include tablet-sm(){
+    max-width: rem(800)!important;
+  }
+  @include mobile-lg(){
+    max-width: rem(780)!important;
+  }
+  @include mobile-md(){
+    max-width: rem(780)!important;
+  }
+  @include mobile-sm(){
+    max-width: rem(780)!important;
+  }  
 }
 
 a,
@@ -164,6 +185,7 @@ a {
   color: $primary-color;
   line-height: 1;
   text-decoration: none;
+  display: inline-block;
 }
 .awesome-icon {
   font-family: "Font Awesome 5 Free";

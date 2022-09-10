@@ -1,9 +1,9 @@
 section {
   overflow: hidden;
-  padding: rem(20) 0 rem(45) ;
+  padding: rem(40) 0 ;
   
   @include mobile-lg(){
-    padding: rem(25) 0 rem(30);
+    padding: rem(25) 0;
   }
 
   &.ptop-0 {
@@ -16,7 +16,6 @@ section {
     background: $secondary-color; 
   }
   &.contact-section{
-    background: $primary-color;
     padding: rem(67) 0 rem(80);
     .container{
       max-width:rem(1000) ;
@@ -32,10 +31,7 @@ section {
       padding: rem(25) 0 rem(30);
     }
   }
-  &.banner-section {
-    padding: 0;
-    background: $primary-color;
-  }
+
   &.secondary-bg {
     background: $secondary-color;
   }

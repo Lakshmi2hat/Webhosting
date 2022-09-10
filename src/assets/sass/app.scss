@@ -10,6 +10,15 @@
 @import "./base/global";
 @import "./base/grid";
 
+// Components
+@import "./components/forms";
+@import "./components/buttons"; 
+@import "./components/column-block";
+@import "./components/card";
+@import "./components/plan-card";
+@import "./components/brand-items";
+@import "./components/tab";
+
 // Layouts
 @import "./layouts/header";
 @import "./layouts/navigation";  
@@ -19,12 +28,10 @@
 @import "./layouts/banner-section";
 @import "./layouts/content-block";
 @import "./layouts/cards-section";  
-        
-
-// Components
-@import "./components/forms";
-@import "./components/buttons"; 
-@import "./components/twocolumn-block";
-  
+@import "./layouts/true-cloud";
+@import "./layouts/pricing";        
+@import "./layouts/contact-us";
+@import "./layouts/real-stories";
+@import "./layouts/serve-website";
 
 // Pages 

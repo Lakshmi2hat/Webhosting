@@ -20,14 +20,82 @@
     color: $white-color;
     background: $primary-color;
     box-shadow: rem(0) rem(0) rem(64) $btn-shadow;
+    &:hover {
+      color: $black-color;
+      background-color: $white-color;
+      box-shadow:none;
+    }
+    @include mobile-md {
+      box-shadow: none;
+    }
   } 
   &.outline-btn {
     border-color: $black-color;
-    .large{
+    &.large{
       line-height: rem(32);
       padding: rem(9) rem(56);
       border:rem(2) solid $black-color;
       margin: rem(35) 0;
+      @include tablet-lg {
+        padding: rem(9) rem(18);
+        width: 100%;
+        margin: rem(15) 0;
+      }
+    }
+    &:hover {
+      color: $white-color;
+      background: $primary-color;
+      border-color:$white-color; 
+    }
+  }
+}
+
+
+// toggle button
+
+.toggle {
+  input[type=checkbox] {
+    height: 0;  
+    width: 0;
+    visibility: hidden;
+  }
+  label {
+    cursor: pointer;
+    text-indent: rem(-9999); 
+    width: rem(93);
+    height: rem(50);
+    background: $primary-color;
+    display: block;
+    position: relative;
+    border-radius: rem(100);
+    &:after {
+      content: '';
+      position: absolute;
+      top: rem(10);
+      left: rem(9);
+      width: rem(30);
+      height: rem(30);
+      background: #fff;
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+    &:active {
+      &:after {
+        width: 130px;
+      }
+    }
+  }
+  input {
+    &:checked {
+      + {
+        label {
+          background:$grey;
+          &:after {
+            left: calc(100% - rem(9));
+            transform: translateX(-100%);
+          }
+        }
+      }
     }
   }
 }

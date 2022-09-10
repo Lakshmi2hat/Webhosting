@@ -1,38 +1,53 @@
 .card {
+    display: block;
     background: $white-color;
     box-shadow: rem(0) rem(10) rem(20) $card-shadow;
     border-radius: rem(8);
     padding: rem(40) rem(32) rem(32);
-    p {
-        font-family: $font-regular;
-        font-size: rem(16);
-        line-height: rem(32);
-        color: $black-color;
-    }
-    h5 {
-        font-family: $font-subhead;
-        font-size: rem(18);
-        line-height: rem(28);
-        margin-top: rem(24);
-        color: $secondary-color;
-    }
-    h6 {
-        font-family: $font-medium;
-        font-size: rem(14);
-        line-height: rem(24);
-        color: $light-grey;
+    .content {
+        p {
+            font-family: $font-regular;
+            font-size: rem(16);
+            line-height: rem(32);
+            color: $black-color;
+        }
+        h5 {
+            font-family: $font-subhead;
+            font-size: rem(18);
+            line-height: rem(28);
+            margin-top: rem(24);
+            color: $secondary-color;
+            margin: rem(24) 0 0;
+        }
+        h6 {
+            font-family: $font-medium;
+            font-size: rem(14);
+            line-height: rem(24);
+            color: $light-grey;
+            margin: 0;
+        }
     }
     img {
         margin-bottom: rem(15);
+        margin-left: rem(34);
     }
     .quotes-icon {
         font-size: rem(16);
         color: $quotes-color;
+        margin-right: rem(16);
     }
     &.large {
-        padding-bottom: rem(96);
+        padding: rem(44) rem(32) rem(96);
     }
     &.medium {
         padding-bottom: rem(14);
+    }
+    &.small {
+        p {
+            font-size: rem(18);
+        }
+    }
+    @include mobile-md {
+        padding: rem(20)!important;
     }
 }

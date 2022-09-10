@@ -1,1 +1,78 @@
- 
+ .banner-section {
+    @include tablet-md {
+        margin-top: rem(102);
+    }
+    .two-column-block{
+        @include mobile-lg {
+            flex-direction: column-reverse;
+        }
+        .img-block {
+            position: relative;
+            padding-right: rem(20);
+            margin-top: rem(-10);
+            @include tablet-md {
+                padding: 0;
+                margin-top: 0;
+            }
+            .element1 {
+                display: block;
+                position: absolute;
+                bottom: rem(158);
+                left: rem(64);
+                @include desktop-xs {
+                    left: rem(-15);
+                }
+            }
+            .element2 {
+                position: absolute;
+                top: rem(63);
+                display: block;
+                right: rem(-2);
+            }    
+            .element3 {
+                position: absolute;
+                bottom: rem(45);
+                right: rem(-4) ;
+            }        
+        }
+    }
+    p {
+        color: $secondary-color-light;
+        line-height: rem(28);
+        letter-spacing: rem(1);
+        font-family: $font-regular;
+        padding-right: rem(136);
+        @include tablet-md {
+            line-height: rem(18);
+            font-size: rem(15);
+            padding-right: 0;
+        }
+    }
+    .button-group {
+        display: flex;
+        gap: rem(24);
+        margin-top: rem(60);
+        @include tablet-md {
+            margin: rem(16) 0 0;
+        }
+    }
+    .nav-pills {
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            background: $inactive-border-color;
+            width: rem(242);
+            height: rem(1);
+            display: block;
+            margin-top: rem(3);
+            bottom: rem(-3);
+            left: rem(8);
+        }
+    }
+    img {
+        @include tablet-lg {
+            width: 100%;
+        }
+    }
+ }

@@ -8,6 +8,7 @@ $desktop-md: rem(1620); // Medium Desktop Screens (Like 1480 - Macbook & Macbook
 $desktop-sm: rem(1420); // Small Desktop Screens
 $desktop-xs: rem(1360); // Small Desktop Screens
 
+$tablet-xl: rem(1199);
 $tablet-lg: rem(1080); // Landscape Tablet
 $tablet-md: rem(991); // Portrait Medium Tablet
 $tablet-sm: rem(865); // Portrait Tablet
@@ -53,7 +54,16 @@ $btn-shadow :rgba(176, 0, 0, 0.3);
 $card-shadow: rgba(41, 41, 42, 0.07);
 $grey: #969BAB;
 $light-grey:rgba(214, 212, 212, 0.88);
-$quotes-color:#2EC5CE;
+$quotes-color:#bfeef0;
+$main-header-color :#2E2E2E;
+$secondary-color-light: #808080;
+$inactive-color: rgba(214, 212, 212, 0.88);
+$inactive-border-color:#E5E5E5;
+$footer-color: #E6E6E6;
+$tab-shadow: #C4C4C4;
+$plan-card-shadow: rgba(0, 0, 0, 0.25);
+$contact-us-bg : #F7FAFE;
+$discount-bg: #FFE87A;
 
 
 // Status messages

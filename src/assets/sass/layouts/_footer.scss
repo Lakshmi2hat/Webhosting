@@ -1,20 +1,25 @@
  footer {
     background: $primary-color;
-    padding: rem(64) rem(104) rem(80);
     color: $white-color;
-    @include tablet-md{
-        padding: rem(40) rem(24);
+    padding: rem(64) 0 rem(80);
+    @include mobile-md{
+        padding: rem(40) 0;
     }
     .footer-top {
         display: flex;
         gap: rem(120);
-        @include tablet-md {
-            gap: rem(10);
+        @include desktop-xs {
+            gap: rem(50);
+        }
+        @include tablet-lg  {
+            gap: rem(20)
+        }
+        @include mobile-lg {
             flex-wrap: wrap;
         }
         .footer-block-left {
             width: 26%;
-            @include tablet-md {
+            @include mobile-lg {
                 width: 100%;
             }
         }
@@ -24,10 +29,18 @@
             gap: rem(120);
             width: 74%;
             margin-top: rem(16);
-            @include tablet-md {
+            @include desktop-xs {
+                gap: unset;
+                flex-wrap: unset;
+                justify-content: space-between;
+            }
+            @include mobile-lg {
                 width: 100%;
-                gap: rem(16);
+            }
+            @include mobile-md {
+                flex-wrap: wrap;
                 margin-top: 0;
+                gap: rem(10);
             }
             ul {
                 display: flex;
@@ -35,30 +48,45 @@
                 gap: rem(24);
                 font-size: rem(16);
                 line-height: rem(32);
-                @include tablet-lg{
+                color: $footer-color;
+                @include desktop-xs {
+                    width: 25%;
+                }
+                @include tablet-lg {
+                    font-size: rem(13);
+                    gap: rem(16);
+                    padding-left:rem(12) ;
+                }
+                @include mobile-md {
                     width: 100%;
-                    gap: rem(10);
-                    font-size: rem(12);
-                    line-height: rem(20);
+                    gap: rem(3);
+                    padding-left: 0;
                 }
                 .sub-head {
                     font-family: $font-subhead;
                     line-height: rem(24);
+                    color: $white-color;
+                }
+                a {
+                    color: $white-color;
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
             }
         }
     }
     .footer-bottom {
         margin-top: rem(96);
-        @include tablet-md  {
-            margin-top: rem(30);
+        @include mobile-md  {
+            margin-top: rem(20);
         }
     }
     p {
         margin-top: rem(16);
-        @include tablet-md {
-            font-size: rem(12);
-            line-height: rem(20);
+        @include tablet-lg {
+            font-size: rem(13);
+            margin-top: 0;
         }
     }
  }

@@ -18,8 +18,12 @@
         .menu-btn {
             cursor: pointer;
             font-size: rem(24);
+            display: none;
             .icon-close-icon{
                 display: none;
+            }
+            @include tablet-md{
+                display: block;
             }
         }
         .nav-menu {
@@ -43,9 +47,11 @@
             }
             li {
                 @include tablet-md {
+                    width: 100%;
                     margin: 0;
-                    padding: 24px 0;
-                    border-bottom: 1px solid $primary-color-light;
+                    text-align: center;
+                    padding: rem(24) 0;
+                    border-bottom: rem(1) solid $primary-color-light;
                 }
             }
             .menu-items {
@@ -53,13 +59,16 @@
                 font-family: $font-semibold;
                 font-size: rem(15);
                 line-height: rem(22); 
-                gap: rem(33);
+                gap: rem(33);  
+                height: rem(22); 
+                align-items: center;             
                 @include tablet-md {
-                    width: 60%;
+                    width: 80%;
                     flex-direction: column;
                     gap: rem(0);
                     text-align: center;
                     margin: auto;
+                    height: unset;
                 }
                 .contact-no {
                     position: relative;
@@ -74,19 +83,57 @@
                             content: none;
                         }
                     }
+                    a {
+                        &:hover {
+                            &::after{
+                                width: 67%;
+                                left: rem(30);
+                            }
+                        }
+                    }
                 }
                 &.menu-left {
                     margin-left: rem(65);
                     @include tablet-md {
                         margin: 0 auto;
-                        padding: 24px 0;
-                        border-bottom: 1px solid $primary-color-light;
+                        padding: rem(24) 0;
+                        border-bottom: rem(1) solid $primary-color-light;
                     }
                 }
                 &.menu-right {
                     gap:rem(63.76);
                     @include tablet-md {
                         gap: rem(0);
+                    }
+                }
+                a {
+                    color:$black-color;
+                    position: relative;
+                    height: rem(22);
+                    display: flex;
+                    align-items: center;
+                    &:hover {
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            border-radius: rem(10);
+                            background: #B00000;
+                            height: 0.125rem;
+                            width: 80%;
+                            display: block;
+                            margin: 0 auto;
+                            left: 0;
+                            right: 0;
+                            bottom: rem(-4);
+                            @include tablet-md {
+                                content: none;
+                            }
+                        }
+                    }
+                    @include tablet-md {
+                        display: block;
+                        height: unset;
+                        text-align: center;
                     }
                 }
             }
@@ -96,7 +143,7 @@
         }
         .icons {
             color: $primary-color;
-            margin-right: rem(7.57);
+            padding-right: rem(7.57);
             &::before{
                 color: $primary-color;
             }
