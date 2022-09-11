@@ -1,0 +1,129 @@
+.pricing {
+    h2 {
+        @include desktop-xs{
+            width: 100%!important;
+        }
+    }
+    p {
+        font-family: $font-normal;
+        font-size: rem(25);
+        line-height: rem(25);
+        margin-top: rem(38);
+        @include tablet-lg {
+            font-size: rem(18);
+            line-height: rem(20);
+            margin-top: rem(20);
+        }
+        @include mobile-lg {
+            font-size: rem(14);
+        }
+    }
+    .toggle {
+        margin-top: rem(57);
+        span {
+            font-family: $font-normal;
+            font-size: rem(25);
+            line-height: rem(25);
+            margin: 0 rem(25);
+            position: relative;
+            @include tablet-lg {
+                font-size: rem(18);
+                line-height: rem(20);
+                margin-top: 0;
+            }
+            @include mobile-lg {
+                font-size: rem(15);
+            }
+            .discount {
+                background: $discount-bg;
+                padding: rem(7) rem(8);
+                font-size: rem(10);
+                line-height: rem(9);
+                border-radius: rem(8);
+                margin-left: rem(17);
+                vertical-align: middle;
+                position: absolute;
+                width: rem(87);
+                text-align: center;
+                top: rem(4);
+                @include mobile-lg {
+                    display: none;
+                }
+            }
+        }
+        label {
+            @include tablet-lg {
+                width: rem(54);
+                height: rem(25);
+                &:after {
+                    top:rem(5);
+                    width: rem(16);
+                    height: rem(15);
+                    left: rem(6);
+                }
+            }
+        }
+        input {
+            &:checked {
+                &+label {
+                    &::after{
+                        left: calc(100% + rem(-6));
+                    }
+                }
+            }
+        }
+        @include tablet-lg {
+            margin: rem(24) 0;
+        }
+    }
+    .nav-pills {
+        width: 80%;
+        margin: rem(71) auto rem(85);
+        &::after {
+            content: "";
+            height: rem(4);
+            display: block;
+            background: $tab-shadow;
+            width: 100%;
+            @include tablet-lg {
+                height: rem(2);
+                bottom: rem(-2);
+            }
+        }
+        @include tablet-lg {
+            width: 100%;
+            margin: rem(15) 0;
+        }
+    }
+    .nav-item {
+        width: 50%;
+        .nav-link {
+            font-family: $font-semibold;
+            font-size: rem(30);
+            line-height: rem(40);
+            color: $black-color;
+            margin: 0;
+            &.active {
+                color: $black-color;
+                &::after{
+                    height: rem(4);
+                    width: 100%;
+                    bottom: rem(-4);
+                    left: 0;
+                    @include tablet-lg {
+                        height: rem(2);
+                        bottom: rem(-2);
+                    }
+                }
+            }
+            @include tablet-lg {
+                font-size: rem(18);
+                line-height: rem(24);
+            }
+            @include mobile-lg {
+                font-size: rem(16);
+                line-height: rem(30);
+            }
+        }
+    }
+}

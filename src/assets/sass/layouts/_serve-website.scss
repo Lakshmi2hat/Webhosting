@@ -1,0 +1,14 @@
+.serve-website {
+    p {
+        font-size: rem(18);
+        @include mobile-lg {
+            font-size: rem(14);
+            line-height: rem(24);
+        }
+    }
+    .brand-container {
+        @include mobile-lg {
+            margin-top: rem(26);
+        }
+    }
+}

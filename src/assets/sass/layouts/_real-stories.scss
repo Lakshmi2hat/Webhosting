@@ -1,0 +1,56 @@
+.real-stories {
+    h2 {
+      margin: rem(56) 0 0;
+      position: relative;
+      @include desktop-xs {
+        margin-top: rem(14);
+      }
+    }
+    .grid-wrap{
+        padding-left: rem(96);
+        @include desktop-xs {
+            padding-left: rem(32);
+        }
+        @include tablet-md {
+            padding-left: 0;
+        }
+        @include mobile-md {
+            grid-gap: rem(15);
+        }
+        .grid-item {
+            padding: rem(15);
+            @include mobile-md {
+                padding: 0;
+            }
+            &:nth-child(1) {
+              p {
+                  margin-top: rem(8);
+                  font-size: rem(18);
+                  @include mobile-lg {
+                    font-size: rem(14);
+                  }
+              }
+                @include tablet-md {
+                    padding-left: rem(32)!important;
+                }
+            }
+            .quotes-bg {
+              background: url(../img/Quote-mark.svg);
+              background-size: 100%;
+              background-repeat: no-repeat;
+              width: rem(143);
+              height: rem(120);
+              display: block;
+              position: absolute;
+              left: rem(-95);
+              top: rem(-58);
+              @include desktop-xs {
+                  width: rem(44);
+                  top: rem(-13);
+                  left: rem(-32);
+              }
+            }
+          }
+    }
+  }
+  

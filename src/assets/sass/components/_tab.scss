@@ -1,0 +1,31 @@
+.nav-pills {
+    .nav-item {
+        .nav-link {
+            padding: 0;
+            margin-right: rem(22);
+            background: none;
+            color: $inactive-color;
+            font-family: $font-semibold;
+            font-size: rem(15);
+            line-height: rem(22);
+            &.active {
+                color: $primary-color;
+                position: relative;
+                &::after{
+                    content: "";
+                    background: $primary-color;
+                    height: rem(1);
+                    width: 83%;
+                    display: block;
+                    bottom: rem(-3);
+                    position: absolute;
+                    left: rem(4);
+                    z-index: 1;
+                }
+            }
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}

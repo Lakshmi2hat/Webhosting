@@ -1,0 +1,22 @@
+.brand-container {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+        width: 33.33%;
+        padding-left: rem(16);
+        &:nth-child(n+4) {
+            margin-top: rem(44);
+            @include tablet-md {
+                margin-top: rem(18);
+            }
+        }  
+        @include tablet-md {
+            padding: 0 rem(8) ;
+        } 
+        img {
+            width: 100%;
+            -o-object-fit: contain;
+            object-fit: contain;
+        }          
+    }
+}

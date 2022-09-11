@@ -1,0 +1,53 @@
+.true-cloud {
+    .two-column-block{
+        @include desktop-xs{
+            align-items: center;
+        }
+    }
+    .brand-container {
+        margin-top: rem(18);
+    }
+    p {
+        font-size: rem(18);
+        margin-top: rem(15);
+        @include mobile-md {
+            font-size: rem(14);
+        }
+    }
+    .icon-blocks {
+        margin-top: rem(80);
+        @include tablet-lg {
+            margin-top:rem(25);
+        }
+        .equal-block{
+            padding: 0 rem(30);
+            @include desktop-xs {
+                padding: 0 rem(15);
+            }
+            @include mobile-lg {
+                padding: 0;
+                margin-bottom: rem(25);
+            }
+        }
+        h4 {
+            margin-top: rem(17);
+            @include desktop-xs {
+                font-size: rem(16);
+            }
+            @include tablet-lg {
+                font-size: rem(14);
+            }
+        }
+        p {
+            font-family: $font-light;
+            font-size: rem(12);
+            line-height: rem(18);
+            margin-top: rem(4);
+            @include mobile-lg {
+                font-family: $font-regular;
+                font-size: rem(14);
+                line-height: rem(24);
+            }
+        }
+    }
+}
